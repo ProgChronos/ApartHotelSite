@@ -13,11 +13,11 @@
     <!--CSS LOCAL-->
     <link rel="stylesheet" href="/css/style.css">
     <!--BOOTSTRAP SCRIPTS-->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
         crossorigin="anonymous"></script>
     <!--ÍCONES-->
     <script src="https://kit.fontawesome.com/08842a80db.js" crossorigin="anonymous"></script>
@@ -25,40 +25,50 @@
 
 <body onload="getYear()" onmouseenter="offP()">
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg">
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">Inicio</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link" aria-current="page" href="#">Sobre</a>
-                        <a class="nav-link" href="#">Portfólio</a>
-                        <a class="nav-link" href="#">Clientes</a>
-                        <a class="nav-link" href="#">Contato</a>
-                        <a class="nav-link disabled">Design</a>
-                        <ul class="list-icons">
-                            <li id="searchInput"></li>
-                            <li class="nav-icon" id="searchIcon" onclick="onSearch()"><a href="#"><i
-                                        class="fa-solid fa-magnifying-glass"></i></a></li>
-                            <li class="nav-icon"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li class="nav-icon"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                            <li class="nav-icon"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                        </ul>
-                        <div class="logo">
-                            <a href=""><img src="img/fl-design-favicon.png" alt="logo"></a>
-                            <h1 class="agency"><span id="fl">FL</span>Agency</h1>
-                        </div>
-                    </div>
+              <a class="navbar-brand" href="#"><img class="nav-logo" src="img/fl-design-favicon.png" alt="Logo"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                          <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success" type="submit">Search</button>
+                  </form>
+                </div>
+              </div>
             </div>
-        </nav>
-
+          </nav>
     </header>
-    <main onclick="offSearch()">
+    <main>
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
