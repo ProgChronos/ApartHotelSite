@@ -12,6 +12,9 @@
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <!--CSS LOCAL-->
     <link rel="stylesheet" href="/css/style.css">
+    <!--CSS SLICK SLIDER-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css">
     <!--BOOTSTRAP SCRIPTS-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -23,50 +26,54 @@
     <script src="https://kit.fontawesome.com/08842a80db.js" crossorigin="anonymous"></script>
 </head>
 
-<body onload="getYear()" onmouseenter="offP()">
+<body onload="getYear()">
     <header>
-        <nav class="navbar navbar-dark bg-dark fixed-top">
-            
+        <nav class="navbar navbar-dark  fixed-top">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img class="nav-logo" src="img/fl-design-favicon.png" alt="Logo"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <a class="navbar-brand" href="#"><img class="nav-logo" src="img/fl-design-favicon.png" alt="Logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-success" type="submit">Search</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="offcanvas-body">
-                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                      </a>
-                      <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                          <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <form class="d-flex mt-3" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-success" type="submit">Search</button>
-                  </form>
-                </div>
-              </div>
             </div>
-          </nav>
+        </nav>
     </header>
     <main>
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -81,24 +88,15 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="img/banner-1.jpg" class="d-block w-100" alt="example-1">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h2>Mais de 20 anos de atuação</h2>
 
-                    </div>
                 </div>
                 <div class="carousel-item">
                     <img src="img/banner-2.jpg" class="d-block w-100" alt="example-2">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h2>diversos prêmios internacionais</h2>
 
-                    </div>
                 </div>
                 <div class="carousel-item">
                     <img src="img/banner-3.jpg" class="d-block w-100" alt="example-3">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h2>projetos elegantes e funcionais</h2>
 
-                    </div>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
@@ -112,206 +110,145 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        <section>
-            <div class="info">
-                <h2>a flagency é definida pela nossa abordagem; valorizamos a descoberta, a inovação e a arte da
-                    invenção.</h2>
-                <br>
-                <p>
-                    A FLAgency é um estúdio premiado com talento para vislumbrar ambientes e marcas inspiradoras. Nossos
-                    projetos excepcionais são impulsionados pelo espírito colaborativo de nosso estúdio que valoriza a
-                    evolução de espaços únicos e funcionais por meio da inovação e criatividade. Entendemos que a
-                    inspiração individual só pode ser realizada através do poder da colaboração. Nossa equipe é um
-                    conjunto de designers e artistas imaginativos e enérgicos. Juntos, falamos muitas linguagens de
-                    design e representamos um espectro completo de possibilidades, sendo pioneiros nas soluções mais
-                    inteligentes e significativas para nossos clientes.
+
+        <section class="sobre-content">
+            <div class="sobre">
+                <h2>sobre o predio</h2>
+                <p class="content">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem sed labore veritatis sint
+                    alias voluptatum unde, quod facere dolorem dolores, eum illum porro deserunt possimus similique est
+                    eos itaque incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur error,
+                    quas odit possimus impedit id itaque vero ex eum, vel, aliquam ullam mollitia sed asperiores autem
+                    earum voluptas! Totam, hic. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis ipsum,
+                    ad molestias at sit vitae aspernatur quisquam odit aliquid eius corporis blanditiis! Animi earum
+                    repudiandae accusantium delectus minus. Qui, vitae.
                 </p>
-                <br>
             </div>
-            <h2 class="title-field">projetos</h2>
-            <div class="projects">
-                <ul id="projectPics">
-                    <li id="p1" onmouseenter="onP1()" onmouseout="offP()"><img class="project-img" src="img/p1.jpg"
-                            alt="imagem do projeto">
-                    </li>
-                    <li id="p2" onmouseenter="onP2()" onmouseout="offP()"><img class="project-img" src="img/p2.jpg"
-                            alt="imagem do projeto">
-                    </li>
-                    <li id="p3" onmouseenter="onP3()" onmouseout="offP()"><img class="project-img" src="img/p3.jpg"
-                            alt="imagem do projeto">
-                    </li>
-                    <li id="p4" onmouseenter="onP4()" onmouseout="offP()"><img class="project-img" src="img/p4.jpg"
-                            alt="imagem do projeto">
-                    </li>
-                    <li id="p5" onmouseenter="onP5()" onmouseout="offP()"><img class="project-img" src="img/p5.jpg"
-                            alt="imagem do projeto">
-                    </li>
-                    <li id="p6" onmouseenter="onP6()" onmouseout="offP()"><img class="project-img" src="img/p6.jpg"
-                            alt="imagem do projeto">
-                    </li>
-                    <li id="p7" onmouseenter="onP7()" onmouseout="offP()"><img class="project-img" src="img/p7.jpg"
-                            alt="imagem do projeto">
-                    </li>
-                    <li id="p8" onmouseenter="onP8()" onmouseout="offP()"><img class="project-img" src="img/p8.jpg"
-                            alt="imagem do projeto">
-                    </li>
-                    <li id="p9" onmouseenter="onP9()" onmouseout="offP()"><img class="project-img" src="img/p9.jpg"
-                            alt="imagem do projeto">
-                    </li>
-                    <li id="p10" onmouseenter="onP10()" onmouseout="offP()"><img class="project-img" src="img/p10.jpg"
-                            alt="imagem do projeto"> </li>
-                    <li id="p11" onmouseenter="onP11()" onmouseout="offP()"><img class="project-img" src="img/p11.jpg"
-                            alt="imagem do projeto"> </li>
-                    <li id="p12" onmouseenter="onP12()" onmouseout="offP()"><img class="project-img" src="img/p12.jpg"
-                            alt="imagem do projeto"> </li>
-                    <li id="p13" onmouseenter="onP13()" onmouseout="offP()"><img class="project-img" src="img/p13.jpg"
-                            alt="imagem do projeto"> </li>
-                    <li id="p14" onmouseenter="onP14()" onmouseout="offP()"><img class="project-img" src="img/p14.jpg"
-                            alt="imagem do projeto"> </li>
-                    <li id="p15" onmouseenter="onP15()" onmouseout="offP()"><img class="project-img" src="img/p15.jpg"
-                            alt="imagem do projeto"> </li>
-                    <li id="p16" onmouseenter="onP16()" onmouseout="offP()"><img class="project-img" src="img/p16.jpg"
-                            alt="imagem do projeto"> </li>
-                </ul>
-            </div>
-            <br>
-            <a href="#" class="clickHere">
-                <h2>click aqui para mais detalhes</h2>
-            </a>
-            <br>
-            <div class="video">
-                <iframe width="1500px" height="845px" src="https://www.youtube.com/embed/BHACKCNDMW8"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe src="https://www.youtube.com/embed/_tJXRwRWSi8" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
             </div>
-            <br>
         </section>
-        <article>
-            <h2 class="title-field">notícias</h2>
-            <div class="newsArea">
-                <ul class="news">
-                    <li id="news1">
-                        <a href="#"><img src="img/news1.jpg" alt="news image" class="newsImg"></a>
-                        <p class="subtitle">05 de março de 2020</p>
-                        <a href="#">
-                            <h3 class="newsTitle">5° simpósio internacional de design</h3>
-                        </a>
-                        <p class="introText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-                            perspiciatis inventore modi ad recusandae ullam pariatur quasi alias, fugit ratione cumque?
-                            Adipisci veritatis, assumenda voluptatem sunt exercitationem similique iste placeat. Lorem
-                            ipsum dolor sit amet, consectetur adipisicing elit. Temporibus rem deleniti maiores tempore?
-                            Laborum, impedit voluptas commodi sapiente voluptate et ad eius eum eaque assumenda natus
-                            voluptatum eligendi porro magni. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                            Blanditiis optio quae, voluptas minus doloremque labore eveniet maiores, sit iusto nostrum,
-                            at recusandae! Error fuga et explicabo accusamus, voluptatum a mollitia.</p>
-                    </li>
-                    <li id="news2">
-                        <a href="#"><img src="img/news2.jpg" alt="news image" class="newsImg"></a>
-                        <p class="subtitle">17 de fevereiro de 2021</p>
-                        <a href="#">
-                            <h3 class="newsTitle">A importância do design aliado à engenharia</h3>
-                        </a>
-                        <p class="introText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae itaque ipsum
-                            porro sunt unde? Cum natus atque repudiandae ratione iste officia, eius, libero labore,
-                            provident doloremque illo harum! Ipsa, labore! Lorem ipsum dolor sit, amet consectetur
-                            adipisicing elit. Debitis facere non rerum harum officia, blanditiis natus animi, id
-                            mollitia vel veritatis iure, voluptatibus dicta velit magni eum nostrum sunt cumque.</p>
-                    </li>
-                    <li id="news3">
-                        <a href="#"><img src="img/news3.jpg" alt="news image" class="newsImg"></a>
-                        <p class="subtitle">25 de abril de 2022</p>
-                        <a href="#">
-                            <h3 class="newsTitle">Urbanismo e design sustentável. Metas opec 2022</h3>
-                        </a>
-                        <p class="introText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sunt
-                            culpa, distinctio et repudiandae commodi exercitationem mollitia tempore in, aliquam
-                            impedit, quidem aut nisi vitae. Mollitia reiciendis eum ratione iusto. Lorem ipsum dolor sit
-                            amet consectetur adipisicing elit. Numquam dicta animi voluptas ab distinctio exercitationem
-                            ratione sed officiis similique, eveniet, in dolorem aspernatur amet sit? Non sunt saepe
-                            sequi architecto?</p>
-                    </li>
-                </ul>
+        <br>
+        <section class="espacos-content">
+            <div class="arrow">
+                <div class="espacos">
+                    <h2>espaços</h2>
+                    <p class="content">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem sed labore veritatis
+                        sint
+                        alias voluptatum unde, quod facere dolorem dolores, eum illum porro deserunt possimus similique
+                        est
+                        eos itaque incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur error,
+                        quas odit possimus impedit id itaque vero ex eum, vel, aliquam ullam mollitia sed asperiores
+                        autem
+                        earum voluptas! Totam, hic. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis
+                        ipsum,
+                        ad molestias at sit vitae aspernatur quisquam odit aliquid eius corporis blanditiis! Animi earum
+                        repudiandae accusantium delectus minus. Qui, vitae.
+                    </p>
+                </div>
             </div>
-            <div class="carrers">
-                <h3 class="jobTitle">interessado em trabalhar conosco?</h3>
-                <button type="button" class="btn btn-dark" autofocus
-                    onclick="alert('&#128533; Não temos vagas disponíveis no momento.')">vagas disponíveis</button>
+            <div class="slick-center">
+                <div class="slick-item">
+                    <img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" alt="image">
+                    <div class="slick-info">
+                        <div class="text">
+                            <h4>title</h4>
+                            <h6>subtitle</h6>
+                        </div>
+                        <a class="see-more" href="#">
+                            <h6>see more</h6><span class="line"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick-item">
+                    <img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" alt="image">
+                    <div class="slick-info">
+                        <div class="text">
+                            <h4>title</h4>
+                            <h6>subtitle</h6>
+                        </div>
+                        <a class="see-more" href="#">
+                            <h6>see more</h6><span class="line"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick-item">
+                    <img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" alt="image">
+                    <div class="slick-info">
+                        <div class="text">
+                            <h4>title</h4>
+                            <h6>subtitle</h6>
+                        </div>
+                        <a class="see-more" href="#">
+                            <h6>see more</h6><span class="line"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick-item">
+                    <img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" alt="image">
+                    <div class="slick-info">
+                        <div class="text">
+                            <h4>title</h4>
+                            <h6>subtitle</h6>
+                        </div>
+                        <a class="see-more" href="#">
+                            <h6>see more</h6><span class="line"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick-item">
+                    <img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" alt="image">
+                    <div class="slick-info">
+                        <div class="text">
+                            <h4>title</h4>
+                            <h6>subtitle</h6>
+                        </div>
+                        <a class="see-more" href="#">
+                            <h6>see more</h6><span class="line"></span>
+                        </a>
+                    </div>
+                </div>
+
             </div>
             </div>
-            <br>
-        </article>
+        </section>
+
+        <section class="msg">
+            <h2>Xclusive apart hotel</h2>
+            <h3>Conforto, conveniência e estilo!</h3>
+        </section>
+
         <div class="divisor">
         </div>
-        <footer class="footerDad">
-            <div class="container">
-                <footer class="py-5">
-                    <div class="row">
-                        <div class="col-2">
-                            <h5>São Paulo</h5>
-                            <div class="address">
-                                <p>
-                                    Viaduto do Cha, 15 - Downtown - São Paulo - CEP: 01002-020
-                                </p>
-                            </div>
-                        </div>
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-muted">©<span id="year"></span> Company, Inc</p>
 
-                        <div class="col-2">
-                            <h5>Rio de Janeiro</h5>
-                            <div class="address">
-                                <p>
-                                    Av. Nossa Senhora, 110 - Copacabana - Rio de Janeiro - CEP: 22020-002
-                                </p>
-                            </div>
-                        </div>
+            <a href="/"
+                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+            </a>
 
-                        <div class="col-2">
-                            <h5>Salvador</h5>
-                            <div class="address">
-                                <p>
-                                    Av. Octávio Mangabeira, 136 Jardim - Armação, Salvador - BA - CEP: 41750-240
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-4 offset-1">
-                            <form>
-                                <h5>Assine a nossa newsletter</h5>
-                                <p>Resumo mensal do que há de novo sobre nós.</p>
-                                <div class="d-flex w-100 gap-2">
-                                    <label for="newsletter1" class="visually-hidden">Email address</label>
-                                    <input id="newsletter1" type="text" class="form-control"
-                                        placeholder="Email address">
-                                    <button class="btn btn-primary" type="button">inscrever</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="d-flex justify-content-between py-4 my-4 border-top">
-                        <p>&copy; <span id="year"></span> FLAgency, Inc. All rights reserved.</p>
-                        <ul class="list-unstyled d-flex">
-                            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                                        <use xlink:href="#twitter" />
-                                    </svg></a></li>
-                            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                                        <use xlink:href="#instagram" />
-                                    </svg></a></li>
-                            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                                        <use xlink:href="#facebook" />
-                                    </svg></a></li>
-                        </ul>
-                        <div class="mail">
-                            <a href="mailto:felipelima85@hotmail.com">
-                                <p><i class="fa-solid fa-envelope"></i> info@flagency.com</p>
-                            </a>
-                        </div>
-                    </div>
-                </footer>
-            </div>
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+            </ul>
         </footer>
     </main>
+    <!--SLICK SLIDER-->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
+    <!--SCRIPT LOCAL-->
     <script src="js/script.js"></script>
+
 </body>
 
 </html>
