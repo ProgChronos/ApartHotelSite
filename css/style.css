@@ -224,10 +224,17 @@ border-color: var(--cor5);
 }
 
 .accordion-title{
+    display: flex;
+    
     background-color: var(--cor5);
     border-color: var(--cor5);
     color: var(--branco);
     font-size: 1.5rem;
+}
+
+.accordion-icon>i{
+    font-size: 1rem;
+    margin-left: 2rem;    
 }
 
 .accordion-title:hover{
@@ -244,6 +251,7 @@ border-color: var(--cor5);
     background-color: var(--cor5);
     border-color: var(--cor5);
     color: var(--branco);
+    padding: 1rem;
 }
 
 .accordion-content-item{
