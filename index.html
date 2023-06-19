@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
+<head class="head">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FLAgency</title>
-    <link rel="shortcut icon" href="img/fl-design-favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/logo-branco-1.png" type="image/x-icon">
     <!--BOOTSTRAP CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -30,7 +30,7 @@
     <header>
         <nav class="navbar navbar-dark  fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img class="nav-logo" src="img/fl-design-favicon.png" alt="Logo"></a>
+                <a class="navbar-brand" href="#"><img class="nav-logo" src="img/logo-branco-1.png" alt="Logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
                     aria-label="Toggle navigation">
@@ -39,7 +39,7 @@
                 <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
                     aria-labelledby="offcanvasDarkNavbarLabel">
                     <div class="offcanvas-header">
-                        <img class="nav-logo" src="img/fl-design-favicon.png" alt="Logo">
+                        <img class="nav-logo" src="img/logo-branco-1.png" alt="Logo">
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
                     </div>
@@ -61,8 +61,6 @@
                                     <li><a class="dropdown-item" href="#">Apartamento-2</a></li>
                                     <li><a class="dropdown-item" href="#">Serviços</a></li>
                                     <li><a class="dropdown-item" href="#">Boate</a></li>
-                                    
-                                    
                                 </ul>
                             </li>
                         </ul>
@@ -76,55 +74,23 @@
         </nav>
     </header>
     <main>
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+        <div class="container-fluid">
+            <video id="background-video" autoplay loop muted poster="img/externo-completo.jpg">
+                <source src="videos/VIDEO 10-05.mp4" type="video/mp4">
+                </video>
+            <div id="itemFixo">
+                <img src="img/logo-branco-1.png" alt="logo">
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/banner-1.jpg" class="d-block w-100" alt="example-1">
-
-                </div>
-                <div class="carousel-item">
-                    <img src="img/banner-2.jpg" class="d-block w-100" alt="example-2">
-
-                </div>
-                <div class="carousel-item">
-                    <img src="img/banner-3.jpg" class="d-block w-100" alt="example-3">
-
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-
-        <section class="sobre-content">
-            <div class="sobre">
+        
+        <section class="sobre-content" id="home-sobre-content">
+            <div class="sobre"  id="home-sobre">
                 <h2>sobre o predio</h2>
                 <p class="content">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem sed labore veritatis sint
-                    alias voluptatum unde, quod facere dolorem dolores, eum illum porro deserunt possimus similique est
-                    eos itaque incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur error,
-                    quas odit possimus impedit id itaque vero ex eum, vel, aliquam ullam mollitia sed asperiores autem
-                    earum voluptas! Totam, hic. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis ipsum,
-                    ad molestias at sit vitae aspernatur quisquam odit aliquid eius corporis blanditiis! Animi earum
-                    repudiandae accusantium delectus minus. Qui, vitae.
+                    Bem-vindo ao nosso exclusivo apart hotel, um local perfeito para as pessoas mais exigentes. Nossos quartos elegantemente decorados oferecem o máximo em conforto e privacidade. Além disso, você terá acesso às nossas completas áreas de lazer, perfeitas para relaxar e descontrair após um longo dia. Nossa equipe altamente treinada está pronta para atender a todas as suas necessidades, proporcionando um serviço impecável. Localizado em uma região privilegiada, nosso apart hotel oferece fácil acesso a atrações locais e importantes centros comerciais. Permita-nos tornar a sua estadia memorável com nossa dedicação inigualável ao seu conforto e satisfação.
                 </p>
             </div>
-            <div class="embed-responsive embed-responsive-16by9">
+            <div class="container-fluid">
                 <iframe src="https://www.youtube.com/embed/_tJXRwRWSi8" title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
@@ -136,27 +102,17 @@
                 <div class="espacos">
                     <h2>espaços</h2>
                     <p class="content">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem sed labore veritatis
-                        sint
-                        alias voluptatum unde, quod facere dolorem dolores, eum illum porro deserunt possimus similique
-                        est
-                        eos itaque incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur error,
-                        quas odit possimus impedit id itaque vero ex eum, vel, aliquam ullam mollitia sed asperiores
-                        autem
-                        earum voluptas! Totam, hic. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis
-                        ipsum,
-                        ad molestias at sit vitae aspernatur quisquam odit aliquid eius corporis blanditiis! Animi earum
-                        repudiandae accusantium delectus minus. Qui, vitae.
+                        Nosso apart hotel oferece uma variedade de espaços cuidadosamente projetados para atender às suas necessidades e proporcionar uma experiência excepcional. Com apartamentos de 55m² e 40m², você encontrará acomodações espaçosas e confortáveis para desfrutar durante sua estadia. Nossa piscina convidativa oferece um refresco bem-vindo nos dias ensolarados, enquanto nosso restaurante exclusivo proporciona uma experiência gastronômica refinada. Para ocasiões especiais, nosso salão de festas elegante é perfeito para celebrar momentos memoráveis. Mantenha-se ativo em nossa academia moderna e desfrute de drinks requintados em nosso bar sofisticado. E se você estiver planejando eventos corporativos, nosso auditório equipado com tecnologia de ponta oferece um ambiente profissional para reuniões e conferências. Aproveite o melhor que nosso apart hotel tem a oferecer, com espaços projetados para tornar sua estadia verdadeiramente excepcional.
                     </p>
                 </div>
             </div>
             <div class="slick-center">
                 <div class="slick-item">
-                    <img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" alt="image">
+                    <img src="img/aptG/salaCozinha/salaCozinhaG2.jpg" alt="image">
                     <div class="slick-info">
                         <div class="text">
-                            <h4>title</h4>
-                            <h6>subtitle</h6>
+                            <h4>Kairos Two</h4>
+                            <h6>Apartamento</h6>
                         </div>
                         <a class="see-more" href="#">
                             <h6>see more</h6><span class="line"></span>
@@ -164,11 +120,11 @@
                     </div>
                 </div>
                 <div class="slick-item">
-                    <img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" alt="image">
+                    <img src="img/aptP/salaCozinha/salaCozinhaP1.jpg" alt="image">
                     <div class="slick-info">
                         <div class="text">
-                            <h4>title</h4>
-                            <h6>subtitle</h6>
+                            <h4>Temp One</h4>
+                            <h6>Apartamento</h6>
                         </div>
                         <a class="see-more" href="#">
                             <h6>see more</h6><span class="line"></span>
@@ -176,11 +132,11 @@
                     </div>
                 </div>
                 <div class="slick-item">
-                    <img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" alt="image">
+                    <img src="img/services/rest-1.jpg" alt="image">
                     <div class="slick-info">
                         <div class="text">
-                            <h4>title</h4>
-                            <h6>subtitle</h6>
+                            <h4>estrutura</h4>
+                            <h6>serviços</h6>
                         </div>
                         <a class="see-more" href="#">
                             <h6>see more</h6><span class="line"></span>
@@ -188,30 +144,17 @@
                     </div>
                 </div>
                 <div class="slick-item">
-                    <img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" alt="image">
+                    <img src="img/club/club-1.jpg" alt="image">
                     <div class="slick-info">
                         <div class="text">
-                            <h4>title</h4>
-                            <h6>subtitle</h6>
+                            <h4>Euphoria Night Club</h4>
+                            <h6>Boate</h6>
                         </div>
                         <a class="see-more" href="#">
                             <h6>see more</h6><span class="line"></span>
                         </a>
                     </div>
                 </div>
-                <div class="slick-item">
-                    <img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" alt="image">
-                    <div class="slick-info">
-                        <div class="text">
-                            <h4>title</h4>
-                            <h6>subtitle</h6>
-                        </div>
-                        <a class="see-more" href="#">
-                            <h6>see more</h6><span class="line"></span>
-                        </a>
-                    </div>
-                </div>
-
             </div>
             </div>
         </section>

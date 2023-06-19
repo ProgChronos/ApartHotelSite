@@ -3,18 +3,11 @@ $('.slick-center').slick({
   centerMode: true,
   centerPadding: '50px',
   slidesToShow: 2,
+  autoplay: true,
+  autoplaySpeed: 3500,
   responsive: [
     {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '25px',
-        slidesToShow: 1
-      }
-    },
-    {
-      breakpoint: 480,
+      breakpoint: 910,
       settings: {
         arrows: false,
         centerMode: true,
@@ -38,13 +31,21 @@ $('.fade').slick({
 
 /*-EFEITO SCROLL-*/
 window.addEventListener('scroll', function () {
-  var textoFixo = document.getElementById('textoFixo');
-  var limiteScroll = 200; // Altere o valor conforme necessário
+  var itemFixo = document.getElementById('itemFixo');
+  var limiteScroll;
+
+  if (window.innerWidth > 1400) {
+    limiteScroll = 550;
+  } else if (window.innerWidth > 920) {
+    limiteScroll = 300;
+  } else {
+    limiteScroll = 200;
+  }
 
   if (window.scrollY > limiteScroll) {
-    textoFixo.style.opacity = '0';
+    itemFixo.style.opacity = '0';
   } else {
-    textoFixo.style.opacity = '1';
+    itemFixo.style.opacity = '1';
   }
 });
 
