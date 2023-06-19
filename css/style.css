@@ -178,7 +178,7 @@ ul>li {
 
 /*-BARRA DE NAVEGAÇÃO-*/
 .navbar {
-    background-color: rgba(0, 0, 0, .25);
+    background-color: rgba(0, 0, 0, .75);
 
 }
 
@@ -386,7 +386,7 @@ iframe {
 
     #itemFixo {
     position: fixed;
-    bottom: 60%;
+    top: 20vw;
     background: rgba(0, 0, 0, 0.5);
     color: #f1f1f1;
     width: 100%;
@@ -421,8 +421,12 @@ width: 70%;
     width: 100%;
 }
 
-.fade>h5{
-    
+.slick-slide>img{
+width: 100%;
+}
+
+.slick-info>h4{
+    margin: 1%;
 }
 
 .slick-prev{
@@ -430,8 +434,8 @@ width: 70%;
 }
 
 .fade>div{
-    border-top-left-radius: 35%;
-    border-bottom-right-radius: 35%;
+    border-top-left-radius: 38%;
+    border-bottom-right-radius: 38%;
 }
 
 .fade:not(.show){
