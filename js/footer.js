@@ -31,3 +31,16 @@ document.addEventListener('DOMContentLoaded', function () {
         footer.innerHTML = footerInjet;
     })();
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    (function msg() {
+        const msg = document.querySelector('.msg');
+
+        const msgInjet = `
+        <h2>Xclusive apart hotel</h2>
+        <h3>Conforto, conveniência e estilo!</h3>
+      `;
+
+        msg.innerHTML = msgInjet;
+    })();
+});
