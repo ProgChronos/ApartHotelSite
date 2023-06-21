@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <div class="offcanvas-body">
                   <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                       <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Home</a>
+                          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link" href="#">Galeria</a>
@@ -32,10 +32,10 @@ document.addEventListener('DOMContentLoaded', function() {
                               Espaços
                           </a>
                           <ul class="dropdown-menu dropdown-menu-dark">
-                              <li><a class="dropdown-item" href="#">Apartamento-1</a></li>
-                              <li><a class="dropdown-item" href="#">Apartamento-2</a></li>
+                              <li><a class="dropdown-item" href="apt1.html">Apartamento Kairos Two</a></li>
+                              <li><a class="dropdown-item" href="apt2.html">Apartamento Temp One</a></li>
                               <li><a class="dropdown-item" href="#">Serviços</a></li>
-                              <li><a class="dropdown-item" href="#">Boate</a></li>
+                              <li><a class="dropdown-item" href="club.html">Boate</a></li>
                           </ul>
                       </li>
                   </ul>
