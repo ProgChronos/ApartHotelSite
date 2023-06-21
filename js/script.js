@@ -44,8 +44,10 @@ window.addEventListener('scroll', function () {
 
   if (window.scrollY > limiteScroll) {
     itemFixo.style.opacity = '0';
+    itemFixo.style.zIndex = '-3';
   } else {
     itemFixo.style.opacity = '1';
+    itemFixo.style.zIndex = '1'
   }
 });
 
