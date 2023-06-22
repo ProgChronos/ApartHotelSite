@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <ul class="dropdown-menu dropdown-menu-dark">
                               <li><a class="dropdown-item" href="apt1.html">Apartamento Kairos Two</a></li>
                               <li><a class="dropdown-item" href="apt2.html">Apartamento Temp One</a></li>
-                              <li><a class="dropdown-item" href="#">Serviços</a></li>
+                              <li><a class="dropdown-item" href="services.html">Serviços</a></li>
                               <li><a class="dropdown-item" href="club.html">Boate</a></li>
                           </ul>
                       </li>
