@@ -50,14 +50,3 @@ window.addEventListener('scroll', function () {
     itemFixo.style.zIndex = '1'
   }
 });
-
-/*-INSERÇÃO DE ANO ATUAL NO FOOTER-*/
-{
-  function getYear() {
-    const ano = document.getElementById('year');
-    const data = new Date;
-    const anoAtual = data.getFullYear();
-
-    ano.innerHTML = ` ${anoAtual}`
-  }
-}

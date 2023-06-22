@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const footerInjet = `
             
         <p class="col-md-4 mb-0 text-muted">©<span id="year"></span>
-        Company, Inc</p>
+        Instituto Chronos do Brasil, Inc</p>
 
     <a href="/"
         class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
@@ -25,6 +25,13 @@ document.addEventListener('DOMContentLoaded', function () {
       `;
 
         footer.innerHTML = footerInjet;
+
+        /*-INSERÇÃO DE ANO ATUAL NO FOOTER-*/ 
+      const ano = document.getElementById('year');
+      const data = new Date;
+      const anoAtual = data.getFullYear();
+  
+      ano.innerHTML = ` ${anoAtual}`
     })();
 });
 
@@ -40,3 +47,12 @@ document.addEventListener('DOMContentLoaded', function () {
         msg.innerHTML = msgInjet;
     })();
 });
+
+/*-INSERÇÃO DE ANO ATUAL NO FOOTER-*/ 
+      const ano = document.getElementById('year');
+      const data = new Date;
+      const anoAtual = data.getFullYear();
+  
+      ano.innerHTML = ` ${anoAtual}`
+    
+  
