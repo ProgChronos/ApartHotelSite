@@ -240,9 +240,17 @@ ul>li {
     margin: 0;
 }
 
-.accordion-content>h5,
+.accordion-content-item>h5,
 h6 {
     text-shadow: none;
+}
+
+.accordion-content-item>h5>a{
+    color: var(--branco);
+}
+
+.accordion-content-item>h5>a:hover{
+    opacity: .7;
 }
 
 
