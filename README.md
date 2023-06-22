@@ -10,7 +10,7 @@ O repositório está organizado da seguinte forma:
 - `css/`: Diretório que armazena os arquivos CSS responsáveis pela estilização do site.
 - `js/`: Diretório que contém os arquivos JavaScript utilizados para adicionar interatividade ao site.
 - `img/`: Diretório para armazenar todas as imagens utilizadas no site.
-- - `videos/`: Diretório para armazenar todas os videos utilizadas no site.
+- `videos/`: Diretório para armazenar todas os videos utilizadas no site.
 
 ## Contribuição
 
