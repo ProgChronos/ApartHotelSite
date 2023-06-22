@@ -141,11 +141,8 @@ ul>li {
    .sobre-content {
 
         border-top: 10vw solid rgba(89, 2, 25, 0.95) !important;
-
-    }
-
-    #apartamento {
         flex-direction: column !important;
+
     }
 
     .accordion {
@@ -269,9 +266,7 @@ h6 {
 }
 
 #home-sobre-content {
-    flex-direction: column;
-    border-top: 100px solid rgba(89, 2, 25, 0.95);
-    border-top-left-radius: 40%;
+    flex-direction: column;   
 }
 
 .sobre {
@@ -409,8 +404,6 @@ iframe {
 #apartamento {
     margin-top: 1%;
     align-items: flex-start;
-    border-top: 100px solid rgba(89, 2, 25, 0.95);
-    border-top-left-radius: 40%;
     background-color: rgba(38, 10, 21, 0.95);
 }
 
