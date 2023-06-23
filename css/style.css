@@ -156,6 +156,27 @@ ul>li {
         padding-right: 2rem;
         align-items: center;
     }
+
+    #itemFixo{
+        display: flex;
+        align-items: center;
+        padding: 2vw !important;
+        top: 35vw !important;
+        
+    }
+
+    #itemFixo>h1{
+        font-size: 2.5vw;
+    }
+
+    #itemFixo>img {
+        width: 7vw;
+    }
+
+    main{
+        margin-top: 74px;
+    }
+    
 }
 
 /*-BARRA DE NAVEGAÇÃO-*/
@@ -400,11 +421,12 @@ iframe {
 
 #itemFixo {
     position: fixed;
-    top: 20vw;
+    top: 15rem;
     background: rgba(0, 0, 0, 0.5);
     color: #f1f1f1;
     width: 100%;
     padding: 20px;
+    padding-left: 80px;
     transition: opacity 0.5s;
     opacity: 1;
 }
