@@ -50,3 +50,11 @@ window.addEventListener('scroll', function () {
     itemFixo.style.zIndex = '1'
   }
 });
+
+/*-EXIBIR IMAGEM AMPLIADA APÓS CLICK-*/
+const galleryItems = document.querySelectorAll(".gallery-item");
+galleryItems.forEach(item => {
+  item.addEventListener("click", function() {
+    this.classList.toggle("fullscreen");
+  });
+});
