@@ -446,7 +446,7 @@ iframe {
 
 #apartamento {
     margin-top: 1%;
-    align-items: flex-start;    
+    align-items: flex-start;
 }
 
 #apartamento>.sobre {
@@ -513,11 +513,12 @@ iframe {
 }
 
 .gallery-item {
+    position: relative;
     margin: .25rem;
     border: .5rem solid var(--cor5);
 }
 
-.gallery-item img:hover{
+.gallery-item img:hover {
     transform: scale(1.1);
 }
 
@@ -528,6 +529,16 @@ iframe {
     object-fit: cover;
     cursor: pointer;
     transition: all .5s ease-in-out;
+}
+
+.gallery-item h6 {
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--cor4);
+    padding: 1%;
+    text-transform: capitalize;
 }
 
 .gallery-item.fullscreen img {
