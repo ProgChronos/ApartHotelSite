@@ -31,8 +31,8 @@ $('.fade').slick({
 
 /*-EFEITO SCROLL-*/
 window.addEventListener('scroll', function () {
-  var itemFixo = document.getElementById('itemFixo');
-  var limiteScroll;
+  const itemFixo = document.getElementById('itemFixo');
+  let limiteScroll;
 
   if (window.innerWidth > 1400) {
     limiteScroll = 550;
