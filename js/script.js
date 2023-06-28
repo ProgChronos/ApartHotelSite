@@ -31,30 +31,61 @@ $('.fade').slick({
 
 /*-EFEITO SCROLL-*/
 window.addEventListener('scroll', function () {
-  const itemFixo = document.getElementById('itemFixo');
+  const itemFixo = document.querySelector('#itemFixo');
+  const navbar = document.querySelector('.navbar');
   let limiteScroll;
 
   if (window.innerWidth > 1400) {
-    limiteScroll = 550;
+    limiteScroll = 350;
+  } else if (window.innerWidth > 1200) {
+    limiteScroll = 250;
   } else if (window.innerWidth > 920) {
-    limiteScroll = 300;
-  } else {
     limiteScroll = 200;
+  } else if (window.innerWidth > 600) {
+    limiteScroll = 175;
+  } else if (window.innerWidth > 400) {
+    limiteScroll = 170;
+  } else {
+    limiteScroll = 150;
   }
 
   if (window.scrollY > limiteScroll) {
     itemFixo.style.opacity = '0';
-    itemFixo.style.zIndex = '-3';
+    itemFixo.style.display = 'none';
+    navbar.style.opacity = '1';
+    navbar.style.display = 'block';
+  } else if (window.scrollY > limiteScroll * 0.8) {
+    itemFixo.style.opacity = '0.2';
+    itemFixo.style.display = 'block';
+    navbar.style.opacity = '0.8';
+    navbar.style.display = 'block';
+  } else if (window.scrollY > limiteScroll * 0.6) {
+    itemFixo.style.opacity = '0.4';
+    itemFixo.style.display = 'block';
+    navbar.style.opacity = '0.6';
+    navbar.style.display = 'block';
+  } else if (window.scrollY > limiteScroll * 0.4) {
+    itemFixo.style.opacity = '0.6';
+    itemFixo.style.display = 'block';
+    navbar.style.opacity = '0.4';
+    navbar.style.display = 'block';
+  } else if (window.scrollY > limiteScroll * 0.2) {
+    itemFixo.style.opacity = '0.8';
+    itemFixo.style.display = 'block';
+    navbar.style.opacity = '0.2';
+    navbar.style.display = 'block';
   } else {
     itemFixo.style.opacity = '1';
-    itemFixo.style.zIndex = '1'
+    itemFixo.style.display = 'block';
+    navbar.style.opacity = '0';
+    navbar.style.display = 'none';
   }
 });
 
 /*-EXIBIR IMAGEM AMPLIADA APÓS CLICK-*/
 const galleryItems = document.querySelectorAll(".gallery-item");
 galleryItems.forEach(item => {
-  item.addEventListener("click", function() {
+  item.addEventListener("click", function () {
     this.classList.toggle("fullscreen");
   });
 });
