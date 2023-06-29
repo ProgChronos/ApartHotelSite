@@ -48,12 +48,3 @@ document.addEventListener('DOMContentLoaded', function () {
         msg.innerHTML = msgInjet;
     })();
 });
-
-/*-INSERÇÃO DE ANO ATUAL NO FOOTER-*/ 
-      const ano = document.getElementById('year');
-      const data = new Date;
-      const anoAtual = data.getFullYear();
-  
-      ano.innerHTML = ` ${anoAtual}`
-    
-  
