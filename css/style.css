@@ -188,13 +188,21 @@ ul>li {
     }
 
     .sobre-content,
-    .espacos {
+     #home-espacos-content {
         flex-direction: column !important;
         padding: 3rem !important;
     }
 
+    #home-espacos{
+        max-width: 100% !important;
+    }
+
     .sobre {
         max-width: 100% !important;
+    }
+
+    #apartamento>.sobre{
+        width: 100% !important;
     }
 
     .container-fluid>img {
