@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const headerInjet = `
       <nav class="navbar navbar-dark  fixed-top">
       <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img class="nav-logo" src="img/logo-branco-1.png" alt="Logo"></a>
+          <a class="navbar-brand" href="index.html"><img class="nav-logo" src="img/logo-x.svg" alt="Logo"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
               aria-label="Toggle navigation">
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
               aria-labelledby="offcanvasDarkNavbarLabel">
               <div class="offcanvas-header">
-                  <img class="nav-logo" src="img/logo-branco-1.png" alt="Logo">
+              <img class="nav-logo" src="img/logo-x.svg" alt="Logo">
                   <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                       aria-label="Close"></button>
               </div>
@@ -39,10 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           </ul>
                       </li>
                   </ul>
-                  <form class="d-flex mt-3" role="search">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn btn-success" type="submit">Search</button>
-                  </form>
+                  
               </div>
           </div>
       </div>

@@ -7,23 +7,21 @@
 </head>
 
 <body>
-    <div class="background">
-        <script src="js/bg.js"></script>
-    </div>
+
     <header class="header">
         <script src="js/header.js"></script>
     </header>
     <main>
         <div class="container-fluid">
-            <video id="background-video" autoplay loop muted poster="img/externo-completo.jpg">
+            <video id="background-video-fixed" autoplay loop muted poster="img/externo-completo.jpg">
                 <source src="videos/externo-1.mp4" type="video/mp4">
             </video>
+
             <div id="itemFixo">
-                <img src="img/logo-branco-1.png" alt="logo">
-                <h1>xclusive apart hotel</h1>
+                <h1><img class="nav-logo" src="img/logo-x.svg" alt="logo">clusive apart hotel</h1>
             </div>
         </div>
-
+        <div class="espacamento"></div>
         <section class="sobre-content" id="home-sobre-content">
             <div class="sobre" id="home-sobre">
                 <h2>sobre o predio</h2>
@@ -38,18 +36,25 @@
                 </p>
             </div>
             <div class="container-fluid">
-                <img src="img/externo-completo.jpg" alt="imagem">
-            </div>        
-        </section>
-        <br>
-        <section class="media-content">
-            <div class="container-fluid">
-                <iframe src="https://drive.google.com/file/d/1vUFbLugkF-hVqlHk62lHD-sd54BztrWj/preview" allow="autoplay"></iframe>
+                <img src="img/HD/pool/pool5.jpg" alt="imagem">
             </div>
         </section>
-        <br>
+
+        <section class="media-content">
+            <div class="container-fluid">
+                <iframe src="https://drive.google.com/file/d/1vUFbLugkF-hVqlHk62lHD-sd54BztrWj/preview"
+                    allow="autoplay"></iframe>
+            </div>
+        </section>
+
         <section class="espacos-content">
             <div class="arrow">
+                <div class="container-fluid">
+                    <img src="img/HD/rest/rest8.png" alt="imagem">
+                </div>
+            </div>
+            <div class="arrow" id="home-espacos">
+
                 <div class="espacos">
                     <h2>espaços</h2>
                     <p class="content">
@@ -66,7 +71,13 @@
                         verdadeiramente excepcional.
                     </p>
                 </div>
+                
             </div>
+
+            </div>
+        </section>
+
+        <section class="espacos-content">
             <div class="slick-center">
                 <div class="slick-item">
                     <img src="img/aptG/salaCozinha/salaCozinhaG2.jpg" alt="image">
@@ -117,11 +128,10 @@
                     </div>
                 </div>
             </div>
-            </div>
         </section>
 
         <section class="msg">
-           
+
         </section>
 
         <div class="divisor">

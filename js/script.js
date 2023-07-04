@@ -29,7 +29,7 @@ $('.fade').slick({
   autoplaySpeed: 3500,
 });
 
-/*-EFEITO SCROLL-*/
+/*-EFEITO FADE SCROLL-*/
 window.addEventListener('scroll', function () {
   const itemFixo = document.querySelector('#itemFixo');
   const navbar = document.querySelector('.navbar');
@@ -53,33 +53,45 @@ window.addEventListener('scroll', function () {
     itemFixo.style.opacity = '0';
     itemFixo.style.display = 'none';
     navbar.style.opacity = '1';
-    navbar.style.display = 'block';
+    navbar.style.zIndex = '1';
   } else if (window.scrollY > limiteScroll * 0.8) {
     itemFixo.style.opacity = '0.2';
     itemFixo.style.display = 'block';
     navbar.style.opacity = '0.8';
     navbar.style.display = 'block';
+    navbar.style.zIndex = '1';
   } else if (window.scrollY > limiteScroll * 0.6) {
     itemFixo.style.opacity = '0.4';
     itemFixo.style.display = 'block';
     navbar.style.opacity = '0.6';
     navbar.style.display = 'block';
+    navbar.style.zIndex = '1';
   } else if (window.scrollY > limiteScroll * 0.4) {
     itemFixo.style.opacity = '0.6';
     itemFixo.style.display = 'block';
     navbar.style.opacity = '0.4';
     navbar.style.display = 'block';
+    navbar.style.zIndex = '1';
   } else if (window.scrollY > limiteScroll * 0.2) {
     itemFixo.style.opacity = '0.8';
     itemFixo.style.display = 'block';
     navbar.style.opacity = '0.2';
     navbar.style.display = 'block';
+    navbar.style.zIndex = '1';
   } else {
     itemFixo.style.opacity = '1';
     itemFixo.style.display = 'block';
     navbar.style.opacity = '0';
-    navbar.style.display = 'none';
+    navbar.style.zIndex = '-1';
   }
+
+  /*-APLICAR BLUR*/
+  window.addEventListener('scroll', function () {
+    const navbrand = document.querySelector('.navbar-brand');
+    const navtoggler = this.document.querySelector('.navbar-toggler')
+    navbrand.style.backdropFilter = 'blur(15px)';
+    navtoggler.style.backdropFilter = 'blur(15px)';
+  });  
 });
 
 /*-EXIBIR IMAGEM AMPLIADA APÓS CLICK-*/
