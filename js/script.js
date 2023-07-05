@@ -2,12 +2,21 @@
 $('.slick-center').slick({
   centerMode: true,
   centerPadding: '50px',
-  slidesToShow: 2,
+  slidesToShow: 3,
   autoplay: true,
-  autoplaySpeed: 3500,
+  autoplaySpeed: 5500,
   responsive: [
     {
-      breakpoint: 910,
+      breakpoint: 1100,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '25px',
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 750,
       settings: {
         arrows: false,
         centerMode: true,
@@ -26,7 +35,7 @@ $('.fade').slick({
   fade: true,
   cssEase: 'linear',
   autoplay: true,
-  autoplaySpeed: 3500,
+  autoplaySpeed: 5500,
 });
 
 /*-EFEITO FADE SCROLL-*/

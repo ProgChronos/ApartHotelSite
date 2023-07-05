@@ -375,7 +375,7 @@ ul>li {
 }
 
 .slick-item {
-
+    width: min-content;
     border-bottom: 1vw solid var(--cor2);
     border-left: 1vw solid var(--cor2);
     border-bottom-right-radius: 20%;
@@ -383,18 +383,12 @@ ul>li {
     margin-left: 1vw;
 }
 
-.slick-item>img {
+.slick-item>a>img {
     padding: 1vw;
     width: 20vw;
     max-width: 300px;
     min-width: 100px;
     border-top-left-radius: 20%;
-}
-
-.slick-prev:before,
-.slick-next:before {
-    color: var(--cor5) !important;
-    font-size: 2rem !important;
 }
 
 .slick-info {
@@ -406,6 +400,14 @@ ul>li {
 .slick-info>h4 {
     min-width: max-content;
 }
+
+.slick-prev:before,
+.slick-next:before {
+    color: var(--cor5) !important;
+    font-size: 2rem !important;
+}
+
+
 
 .slick-dots>li>button::before {
     color: var(--cor5) !important;
