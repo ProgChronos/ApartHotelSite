@@ -27,7 +27,7 @@
 * {
     margin: 0;
     padding: 0;
-    
+
 }
 
 :hover {
@@ -188,12 +188,12 @@ ul>li {
     }
 
     .sobre-content,
-     #home-espacos-content {
+    #home-espacos-content {
         flex-direction: column !important;
         padding: 3rem !important;
     }
 
-    #home-espacos{
+    #home-espacos {
         max-width: 100% !important;
     }
 
@@ -201,7 +201,7 @@ ul>li {
         max-width: 100% !important;
     }
 
-    #apartamento>.sobre{
+    #apartamento>.sobre {
         width: 100% !important;
     }
 
@@ -364,14 +364,15 @@ ul>li {
 }
 
 /*-CAROUSEL-*/
-.carousel{
+.carousel {
     margin-bottom: 5rem !important;
 }
 
 .slick-center {
     width: 100%;
+    height: 100%;
     max-width: 70vw;
-   margin: auto;
+    margin: auto;
 }
 
 .slick-item {
@@ -385,7 +386,7 @@ ul>li {
 
 .slick-item>a>img {
     padding: 1vw;
-    width: 20vw;
+    width: 100%;
     max-width: 300px;
     min-width: 100px;
     border-top-left-radius: 20%;
@@ -454,7 +455,7 @@ ul>li {
 
 /*-SECTIONS-*/
 section {
-    
+
     margin: 0 auto;
 }
 
@@ -480,6 +481,7 @@ section {
     max-width: 40vw;
 
 }
+
 #home-espacos {
     max-width: 40vw;
 }
@@ -529,8 +531,8 @@ section {
     width: 100%;
     padding: 0;
     margin: 0;
-    border-bottom: 5vw solid ;
-    border-top: 5vw solid ;
+    border-bottom: 5vw solid;
+    border-top: 5vw solid;
 
 }
 
@@ -542,7 +544,7 @@ section {
     width: 100%;
     background-color: var(--preto);
     /* border: 2px solid var(--branco); */
-    
+
 }
 
 iframe {
@@ -570,13 +572,13 @@ iframe {
     border-bottom: 5vw solid;
 }
 
-#ambientes>.arrow{
+#ambientes>.arrow {
     width: max-content;
 }
 
 #ambientes>.arrow>.espacos {
     width: 100%;
-    
+
 }
 
 .slick-slide>img {
@@ -681,7 +683,7 @@ iframe {
 .accordion-header>.accordion-button {
     background-color: var(--cor4) !important;
     color: var(--preto) !important;
-    font-family: 'Roboto', sans-serif;   
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     text-transform: uppercase !important;
 }
@@ -705,7 +707,7 @@ iframe {
     padding: 2%;
     background-color: var(--preto);
     border-top: 2px solid;
-    
+
 }
 
 .msg>h2 {

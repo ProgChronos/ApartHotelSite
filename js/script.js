@@ -2,21 +2,30 @@
 $('.slick-center').slick({
   centerMode: true,
   centerPadding: '50px',
-  slidesToShow: 3,
+  slidesToShow: 4,
   autoplay: true,
   autoplaySpeed: 5500,
   responsive: [
     {
-      breakpoint: 1100,
+      breakpoint: 1930,
       settings: {
         arrows: false,
         centerMode: true,
         centerPadding: '25px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 1400,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '10%',
         slidesToShow: 2
       }
     },
     {
-      breakpoint: 750,
+      breakpoint: 650,
       settings: {
         arrows: false,
         centerMode: true,
@@ -100,7 +109,7 @@ window.addEventListener('scroll', function () {
     const navtoggler = this.document.querySelector('.navbar-toggler')
     navbrand.style.backdropFilter = 'blur(15px)';
     navtoggler.style.backdropFilter = 'blur(15px)';
-  });  
+  });
 });
 
 /*-EXIBIR IMAGEM AMPLIADA APÓS CLICK-*/
