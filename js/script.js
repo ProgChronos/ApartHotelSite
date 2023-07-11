@@ -114,8 +114,50 @@ window.addEventListener('scroll', function () {
 
 /*-EXIBIR IMAGEM AMPLIADA APÓS CLICK-*/
 const galleryItems = document.querySelectorAll(".gallery-item");
+let touchStartX = 0;
+let touchEndX = 0;
+
 galleryItems.forEach(item => {
   item.addEventListener("click", function () {
     this.classList.toggle("fullscreen");
   });
+
+  item.addEventListener("touchstart", function (event) {
+    touchStartX = event.touches[0].clientX;
+  });
+
+  item.addEventListener("touchend", function (event) {
+    touchEndX = event.changedTouches[0].clientX;
+    handleSwipe(this);
+  });
 });
+
+function handleSwipe(item) {
+  const minSwipeDistance = 100; // Distância mínima para considerar um swipe
+
+  if (touchEndX - touchStartX > minSwipeDistance) {
+    // Swipe para a direita (imagem anterior)
+    showPreviousImage(item);
+  } else if (touchStartX - touchEndX > minSwipeDistance) {
+    // Swipe para a esquerda (próxima imagem)
+    showNextImage(item);
+  }
+}
+
+function showPreviousImage(item) {
+  const previousItem = item.previousElementSibling;
+
+  if (previousItem && previousItem.classList.contains("gallery-item")) {
+    previousItem.classList.toggle("fullscreen");
+    item.classList.toggle("fullscreen");
+  }
+}
+
+function showNextImage(item) {
+  const nextItem = item.nextElementSibling;
+
+  if (nextItem && nextItem.classList.contains("gallery-item")) {
+    nextItem.classList.toggle("fullscreen");
+    item.classList.toggle("fullscreen");
+  }
+}
