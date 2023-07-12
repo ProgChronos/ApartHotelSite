@@ -180,8 +180,23 @@ ul>li {
     }
 }
 
+@keyframes slideFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    50% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
 /*-RESPONSIVIDADE-*/
-@media screen and (max-width: 925px) {
+@media screen and (max-width: 1025px) {
 
     h2 {
         min-width: 100%;
@@ -222,16 +237,20 @@ ul>li {
         align-items: center;
     }
 
-    #itemFixo{
-        top: 5vh !important;
+    #itemFixo {
+        display: flex;
+        align-items: flex-end;
+        padding: .5rem !important;
+        border-radius: 0 1rem 1rem 0 !important;
+        top: 10vh !important;
     }
 
     #itemFixo>h1 {
-        font-size: 5vw;
+        font-size: 4vw;
     }
 
     #itemFixo>h1>img {
-        width: 7vw;
+        width: 6vw;
         margin: 0 !important;
     }
 
@@ -459,17 +478,24 @@ section {
 .sobre-content,
 .espacos-content {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     width: 100%;
     height: 100%;
-    margin: 0px;
+    margin: 0;
     background-color: var(--preto);
     padding: 3vw;
-    justify-content: space-evenly;
+    align-items: center;
 }
 
-.sobre-content img, .espacos-content img {
-    max-width: 800px;
+.sobre-content>.container-fluid{
+    display: flex;
+    justify-content: center;
+}
+
+.sobre-content > .arrow> .container-fluid > img,
+.espacos-content  > .arrow> .container-fluid > img, .sobre-content>.container-fluid>img{
+    max-width: 1000px;
 }
 
 .sobre,
@@ -504,16 +530,17 @@ section {
 
 #itemFixo {
     position: fixed;
-    top: 20vh;
+    top: 30vh;
     background: var(--preto);
     width: 40%;
     padding: 20px;
-    padding-left: 3vw;
+    padding-left: 2rem;
     transition: opacity 0.5s;
     opacity: 1;
     border-top: 2px solid var(--branco);
     border-bottom: 2px solid var(--branco);
-    border-radius: 0 1rem 1rem 0;
+    border-radius: 0 2rem 2rem 0;
+    animation: slideFadeIn 3s ease-in-out;
 }
 
 #itemFixo>h1 {
@@ -664,14 +691,13 @@ iframe {
 
 .gallery-item.fullscreen img {
     position: fixed;
-    margin-top: 74px;
-    margin-left: 5vw;
-    border: 5vh solid var(--cor2);
+    margin-top: 0;
+    padding: 0 .5rem;
     top: 0;
     left: 0;
-    width: 90vw;
-    height: 90vh;
-    background-color: var(--cor2);
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
     object-fit: contain;
     z-index: 9;
     cursor: pointer;
