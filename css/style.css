@@ -541,6 +541,7 @@ section {
     border-bottom: 2px solid var(--branco);
     border-radius: 0 2rem 2rem 0;
     animation: slideFadeIn 3s ease-in-out;
+    word-wrap: break-word;
 }
 
 #itemFixo>h1 {
