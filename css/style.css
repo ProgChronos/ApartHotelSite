@@ -739,7 +739,7 @@ iframe {
 }
 
 .accordion-collapse.show > .container-fluid {
-    width: 100vw;
+    width: 80vw;
 }
 
 /*-FOOTER*/
