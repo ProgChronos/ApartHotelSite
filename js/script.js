@@ -3,7 +3,7 @@ $('.slick-center').slick({
   centerMode: true,
   centerPadding: '50px',
   slidesToShow: 4,
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 5500,
   responsive: [
     {
@@ -45,6 +45,21 @@ $('.fade').slick({
   cssEase: 'linear',
   autoplay: true,
   autoplaySpeed: 5500,
+});
+
+$('.autoplay').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+});
+
+$('.one-time').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  adaptiveHeight: true
 });
 
 /*-EFEITO FADE SCROLL-*/

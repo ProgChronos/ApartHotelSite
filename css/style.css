@@ -197,6 +197,16 @@ ul>li {
     }
 }
 
+@keyframes buttonAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.01);
+    }
+}
+
 /*-RESPONSIVIDADE-*/
 @media screen and (max-width: 1025px) {
 
@@ -258,6 +268,10 @@ ul>li {
 
     .slick-dots {
         display: none !important;
+    }
+
+    .carousel-item h2 {
+        font-size: 1rem;
     }
 
 }
@@ -386,7 +400,9 @@ ul>li {
     margin-bottom: 5rem !important;
 }
 
-.slick-center {
+.slick-center,
+.autoplay,
+.one-time {
     width: 100%;
     height: 100%;
     max-width: 70vw;
@@ -395,6 +411,7 @@ ul>li {
 
 .slick-item {
     width: min-content;
+    max-width: 300px;
     border-bottom: 1vw solid var(--cor2);
     border-left: 1vw solid var(--cor2);
     border-bottom-right-radius: 20%;
@@ -447,6 +464,48 @@ ul>li {
     opacity: 0.5;
     font-weight: 300;
     font-size: 101%;
+}
+
+.carousel.slide{
+    max-width: 70vw;
+    margin: auto;
+}
+
+.carousel-item h2 {
+    margin: auto;
+    padding: 0;
+    border: none;
+    background-color: rgba(15, 15, 15, 0.85);
+    
+}
+
+.carousel-item h2:hover {
+    color: var(--cor5);
+    background-color: rgba(15, 15, 15, 0.99);
+}
+
+.carousel-item a {
+    text-decoration: none;
+    transition: all 200ms ease-in-out;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    position: absolute;
+    background-color: rgba(15, 15, 15, 0.35);
+}
+
+.carousel-control-next-icon:hover,
+.carousel-control-prev-icon:hover {
+    background-color: rgba(15, 15, 15, 0.85);
+}
+
+.carousel-control-next-icon{
+    right: -50px;
+}
+
+.carousel-control-prev-icon{
+    left: -50px;
 }
 
 /*-VIDEO BG-*/
@@ -738,7 +797,7 @@ iframe {
     animation-name: expansive;
 }
 
-.accordion-collapse.show > .container-fluid {
+.accordion-collapse.show>.container-fluid {
     width: 80vw;
 }
 
