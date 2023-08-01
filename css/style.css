@@ -807,6 +807,11 @@ iframe {
     width: 80vw;
 }
 
+.twinmotion-embed-wrapper{
+    width: 75vw;
+    height: 75vw;
+}
+
 /*-FOOTER*/
 .msg {
     display: flex;
