@@ -797,7 +797,6 @@ iframe {
 }
 
 .accordion-collapse.show {
-
     width: 100%;
     animation-duration: 500ms;
     animation-name: expansive;
@@ -810,6 +809,8 @@ iframe {
 .twinmotion-embed-wrapper{
     width: 75vw;
     height: 75vw;
+    max-width: 90vh;
+    max-height: 90vh;
 }
 
 /*-FOOTER*/
