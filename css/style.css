@@ -9,6 +9,11 @@
     src: url('../fonts/Vogue.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Avenue';
+    src: url('../fonts/MADEAvenuePERSONALUSE-Regular.otf') format('opentype');
+}
+
 
 
 /*-VARIÁVEIS-*/
@@ -69,10 +74,11 @@ a {
 
 h1 {
     color: var(--preto);
-    font-family: 'Vogue', sans-serif;
+    font-family: 'Avenue', sans-serif;
     font-size: 4rem;
     font-weight: normal;
     text-transform: uppercase;
+    margin: 1%;
 }
 
 h1::first-letter {
@@ -90,7 +96,7 @@ h2 {
     padding: 0 1rem;
     max-width: 35rem;
     text-shadow: 2px 2px rgba(13, 13, 13, 0.288);
-    font-family: 'Vogue', sans-serif;
+    font-family: 'Avenue', sans-serif;
     text-transform: uppercase;
     border-bottom: 2px solid;
     border-image: linear-gradient(to right, var(--cor5), var(--preto)) 1;
@@ -287,7 +293,7 @@ ul>li {
     margin-left: 2vw;
     margin-left: 2vw;
     padding: .75rem;
-    background-color: rgba(15, 15, 15, 0.1);
+    background-color: rgba(15, 15, 15, 0.35);
     border-radius: 50%;
 }
 
@@ -303,7 +309,7 @@ ul>li {
 .navbar-toggler {
     margin-right: 2vw;
     padding: 1rem;
-    background-color: rgba(15, 15, 15, 0.1);
+    background-color: rgba(15, 15, 15, 0.35);
     border-radius: 50%;
 }
 
