@@ -3,8 +3,8 @@ $('.slick-center').slick({
   centerMode: true,
   centerPadding: '50px',
   slidesToShow: 4,
-  autoplay: false,
-  autoplaySpeed: 5500,
+  autoplay: true,
+  autoplaySpeed: 2500,
   responsive: [
     {
       breakpoint: 1930,
